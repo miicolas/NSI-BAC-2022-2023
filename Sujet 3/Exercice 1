@@ -1,0 +1,7 @@
+def delta(tab):
+    precedente = 0
+    diff = []
+    for val in tab:
+        diff.append(val-precedente)
+        precedente = val
+    return diff

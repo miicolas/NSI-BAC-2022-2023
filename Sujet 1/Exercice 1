@@ -1,0 +1,6 @@
+def recherche(caractere, mot):
+    occurrences = 0
+    for c in mot:
+        if caractere == c:
+            occurrences += 1
+    return occurrences
