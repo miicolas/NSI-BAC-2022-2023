@@ -1,9 +1,0 @@
-def maxi(tab):
-
-
-    maximum = tab[0]
-    for i in range(len(tab)):
-        if tab[i] > maximum:
-            maximum = tab[i]
-            indice = i
-    return maximum, indice

@@ -1,10 +1,23 @@
-pieces = [100,50,20,10,5,2,1] # Erreur de majuscule dans le sujet
-def rendu_glouton(arendre, solution=[], i=0):
-    if arendre == 0: # Erreur d'indentation dans le sujet
-        return solution
-    p = pieces[i]
-    if p <= arendre :
-        solution.append(p)
-        return rendu_glouton(arendre - p, solution, i)
-    else :
-        return rendu_glouton(arendre, solution, i+1)
+urne = ['A', 'A', 'A','B', 'C', 'B', 'C','B', 'C', 'B']
+
+def depouille(urne):
+    resultat = {'A': 0, 'B': 0, 'C': 0}
+    for bulletin in urne:
+        if bulletin in resultat:
+            resultat[bulletin] = resultat[bulletin] + 1
+        else : 
+            pass
+    return resultat
+
+def vainqueur(election):
+    nmax = 0
+    for candidat in election:
+        if election[candidat] > nmax:
+            nmax = election[candidat]
+            vainqueur = candidat
+    liste_finale = [nom for nom in election if election[nom] == nmax]
+    return liste_finale
+
+election = depouille(urne)
+print(election)
+print(vainqueur(election))

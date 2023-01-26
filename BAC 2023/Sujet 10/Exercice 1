@@ -1,9 +1,0 @@
-def occurrence_lettres(phrase):
-    dico = dict()
-    for c in phrase:
-        if c in dico:
-            dico[c] += 1
-        else:
-            dico[c] = 1
-    return dico
-

@@ -1,7 +1,1 @@
-def moyenne(notes):
-    somme = 0
-    somme_coeff = 0
-    for couple in notes:
-        somme += couple[1] * couple[0]
-        somme_coeff += couple[1]
-    return somme / somme_coeff
+
