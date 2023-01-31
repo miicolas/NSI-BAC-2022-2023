@@ -6,5 +6,9 @@ def maxliste (tab) :
     return maximum
     
 tab = -27, 24, -3, 15
+
 print(maxliste(tab))
         
+
+
+
