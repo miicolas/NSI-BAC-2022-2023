@@ -1,6 +1,7 @@
-def a_doublon (lst): 
-    for i in range (len(lst)-1) : 
-        if lst[i] == lst[i+1] : 
+def a_doublon (lst):
+    """Retourne True si la liste lst contient au moins un doublon, False sinon.""" 
+    for i in range (len(lst)-1) :  # On parcourt la liste
+        if lst[i] == lst[i+1] :  # Si l'élément courant est égal à l'élément suivant
             return True       
     return False
 

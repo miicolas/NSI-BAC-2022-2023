@@ -1,10 +1,11 @@
 def mini(releve, date):
-    min_val = releve[0]
-    min_date = date[0]
-    for i in range(1, len(releve)):
-        if releve[i] < min_val:
-            min_val = releve[i]
-            min_date = date[i]
+    """Renvoie la date et la valeur minimale d'un relevé de température"""
+    min_val = releve[0] # On initialise la valeur minimale à la première valeur du relevé
+    min_date = date[0] # On initialise la date minimale à la première date du relevé
+    for i in range(1, len(releve)): # On parcourt le relevé 
+        if releve[i] < min_val: # Si la valeur courante est plus petite que la valeur minimale
+            min_val = releve[i] # On met à jour la valeur minimale
+            min_date = date[i] # On met à jour la date minimale
 
     return min_date, min_val
 

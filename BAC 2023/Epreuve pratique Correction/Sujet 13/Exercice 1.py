@@ -1,10 +1,9 @@
-def recherche(a,liste): 
-    nombre_valeur = len(liste)
-    c=0
-    for i in range(nombre_valeur):
-        if a == liste[i]:
-            c += 1
-        
-    return c
-liste = [9, 5, 8, 5, 0, 2, 7, 1, 5, 3, 6]
-print(recherche(5,liste))
+def recherche (a, tab) :
+    """renvoie le nombre d'occurrences de a dans tab"""
+    r = 0 
+    for i in range(len(tab)): # On parcourt le tableau
+        if tab[i]== a : # Si l'élément courant est égal à a
+            r+= 1 # On incrémente r de 1
+    return r
+
+assert recherche (5, [-2, 5, 3, 5, 4, 5]) ==3
