@@ -16,7 +16,7 @@ n2 = ABR(None, 2, n3)
 abr1 = ABR(n0, 1, n2)
 
 def ajoute(cle,a): 
-    "Écrire une fonction récursive ajoute(cle,a) qui prend en paramètres une clé cle et un arbre binaire de recherche a, et qui renvoie un arbre binaire de recherche dans lequel cle a été insérée. Dans le cas où cle est déjà présente dans a, la fonction renvoie l’arbre a inchangé"
+    """Écrire une fonction récursive ajoute(cle,a) qui prend en paramètres une clé cle et un arbre binaire de recherche a, et qui renvoie un arbre binaire de recherche dans lequel cle a été insérée. Dans le cas où cle est déjà présente dans a, la fonction renvoie l’arbre a inchangé"""
     if a is None:
         return ABR(None, cle, None)
     if cle < a.cle:
