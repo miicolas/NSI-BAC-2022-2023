@@ -6,4 +6,4 @@ def rechercher(caractere,chaine):
             c+=1 
     return c
 
-print(rechercher('e',"sciences"))
+assert rechercher('e',"sciences") == 2
