@@ -5,7 +5,7 @@ def selection_enclos (tableau_animaux, num_enclos):
     result = [] # on crée une liste vide
     for animal in tableau_animaux: # on itère sur les animaux
         if animal['enclos'] == num_enclos: # si l'enclos de l'animal est le bon
-            result.append(animal)
+            result.append(animal) 
     return result
 
 animaux = [ {'nom':'Medor', 'espece':'chien', 'age':5, 'enclos':2},
