@@ -14,3 +14,4 @@ def fusion(tab1, tab2):
     return resultat
 
 print(fusion([3, 5], [2, 5]))
+

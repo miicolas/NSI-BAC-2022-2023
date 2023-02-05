@@ -5,8 +5,8 @@ def traduire_romain(nombre) :
     if len(nombre) == 1:
         return romains[nombre] #
     elif romains[nombre[0]] >= romains[nombre[1]] :
-        return romains[nombre[0]] + traduire_romain(nombre[1:]) 
+        return romains[nombre[0]]  + traduire_romain(nombre[1:])
     else:
         return traduire_romain(nombre[1:]) - romains[nombre[0]]
 
-print(traduire_romain("MCMXCIX"))
+print(traduire_romain("IX"))

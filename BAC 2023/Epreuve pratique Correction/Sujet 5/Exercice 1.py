@@ -1,12 +1,27 @@
 import random 
-def lancer (n):
-    """renvoie une liste de n nombres aléatoires entre 1 et 6"""  
-    return [random.randint(1,6) for i in range (n)]  # On crée une liste de n nombres aléatoires entre 1 et 6
+def lancer(n) : 
 
-def paire_6(tab): 
-    """renvoie True si le tableau tab contient au moins deux 6, False sinon"""
-    return tab.count(6)>= 2 # On compte le nombre d'occurrences de 6 dans le tableau et on renvoie True si le nombre d'occurrences est supérieur ou égal à 2
+        return [random.randint(1,6) for i in range(n)]
+
+def paire_6(tab) :
+    c = 0
+    for i in range(len(tab)): 
+        if tab[i] == 6 : 
+            c += 1
+    if c >= 2 : 
+        return True
+    else: 
+        return False
+
+lancer1 = lancer(5)
+print(lancer1, paire_6(lancer1))
 
 
+lancer2 = lancer(5)
+print(lancer2, paire_6(lancer2))
 
-print(paire_6(lancer(5)))
+lancer3 = lancer(3)
+print(lancer3, paire_6(lancer3))
+
+lancer4 = lancer(0)
+print(lancer4, paire_6(lancer4))
