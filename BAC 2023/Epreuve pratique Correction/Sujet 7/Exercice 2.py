@@ -8,5 +8,3 @@ def traduire_romain(nombre) :
         return romains[nombre[0]]  + traduire_romain(nombre[1:])
     else:
         return traduire_romain(nombre[1:]) - romains[nombre[0]]
-
-print(traduire_romain("IX"))
