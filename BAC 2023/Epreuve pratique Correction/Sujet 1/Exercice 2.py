@@ -15,7 +15,7 @@ def vainqueur(election):
         if election[candidat] > nmax:
             nmax = election[candidat]
             vainqueur = candidat
-    liste_finale = [election[candidat]==nmax]
+    liste_finale = [nom for nom in election if election[nom] == nmax]
     return liste_finale
 
 election = depouille(urne)

@@ -6,4 +6,4 @@ def recherche (a, tab) :
             r+= 1 # On incrémente r de 1
     return r
 
-assert recherche (5, [-2, 5, 3, 5, 4, 5]) ==3
+assert recherche (5, [-2, 5, 3, 5, 4, 5]) == 3
