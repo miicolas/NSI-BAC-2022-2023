@@ -1,6 +1,9 @@
 def indices_maxi (tab) : 
-    """retourne le maximum et les indices de ses occurrences dans le tableau tab"""
-    max_val = max(tab) # On récupère la valeur maximale du tableau
+    """retourne le maximum et les indices de ses occurrences dans le tableau tab""" 
+    max_val = 0
+    for i in range(len(tab)) : 
+        if tab[i] > max_val : 
+            max_val = tab[i]
     indice = [] # On crée une liste vide qui contiendra les indices des occurrences du maximum
     if len(tab) == 0 :  # Si la liste est vide, on renvoie False 
         return False
