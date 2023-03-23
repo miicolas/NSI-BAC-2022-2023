@@ -15,13 +15,13 @@ def insere(arbre, cle):
     """ arbre est une instance de la classe Arbre qui implÃ©mente
         un arbre binaire de recherche.
     """
-    if  cle < arbre.v :
+    if cle < arbre.v:
         if arbre.fg != None:
             insere(arbre.fg, cle)
         else:
             arbre.fg = Arbre(cle)
     else:
-        if arbre.fd != None:
+        if arbre.fd != None :
             insere(arbre.fd, cle)
         else:
             arbre.fd = Arbre(cle)

@@ -6,16 +6,14 @@ class Arbre:
 
 
 def taille(a):
-    """Retourne le nombre de noeuds de l'arbre a"""
-    if a == None: # Si l'arbre est vide
-        return 0
-    return 1+taille(a.fg)+taille(a.fd) # On compte le noeud courant et on ajoute la taille des sous-arbres
-
-def hauteur(a): 
-    """Retourne la hauteur de l'arbre a"""
     if a == None:
         return 0
-    return 1+max(hauteur(a.fg), hauteur(a.fd)) # On compte le noeud courant et on ajoute la hauteur du plus grand sous-arbre
+    return 1+taille(a.fg)+taille(a.fd)
+
+def hauteur(a):
+    if a == None:
+        return 0
+    return 1+max(hauteur(a.fg), hauteur(a.fd))
 
 abr = Arbre(0)
 a1 = Arbre(1)
