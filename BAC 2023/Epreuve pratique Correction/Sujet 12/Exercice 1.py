@@ -15,14 +15,13 @@ n3 = ABR(None, 3, None)
 n2 = ABR(None, 2, n3)
 abr1 = ABR(n0, 1, n2)
 
-def ajoute(cle,a): 
-    """Écrire une fonction récursive ajoute(cle,a) qui prend en paramètres une clé cle et un arbre binaire de recherche a, et qui renvoie un arbre binaire de recherche dans lequel cle a été insérée. Dans le cas où cle est déjà présente dans a, la fonction renvoie l’arbre a inchangé"""
-    if a is None: # Si l'arbre est vide, on renvoie un arbre binaire de recherche avec la clé en racine
-        return ABR(None, cle, None) # On renvoie un arbre binaire de recherche avec la clé en racine
-    if cle < a.cle: # Si la clé est inférieure à la clé de la racine
-        a.gauche = ajoute(cle, a.gauche) # On insère la clé dans le sous-arbre gauche
-    elif cle > a.cle: # Si la clé est supérieure à la clé de la racine
-        a.droit = ajoute(cle, a.droit) # On insère la clé dans le sous-arbre droit
-    return a
 
-print(ajoute(4, abr1))
+def ajoute(cle, a):
+    if a is None : 
+        return ABR(None, cle , None)
+    elif cle == a.cle : 
+        return a
+    elif cle < a.cle : 
+        return ABR(ajoute(cle, a.gauche))
+    else : 
+        return ABR (ajoute(cle, a.droit))

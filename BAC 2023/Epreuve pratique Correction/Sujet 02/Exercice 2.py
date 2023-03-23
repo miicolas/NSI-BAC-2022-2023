@@ -9,6 +9,3 @@ def positif(pile):
         x = pile_2.pop()
         pile_1.append(x)
     return pile_1
-
-pile = -1, 0, 5, -3, 4, -6, 10, 9, -8
-print(positif(pile))

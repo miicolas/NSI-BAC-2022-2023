@@ -7,34 +7,35 @@ class Pile:
 
     def est_vide(self):
         """
-        Renvoie le booleen True si la pile est vide, False sinon.
+        Renvoie True si la pile est vide, False sinon
         """
         return self.valeurs == []
-    
-    def empiler(self, v):
+
+    def empiler(self, c):
         """
-        Place l'element v au sommet de la pile
+        Place l'element c au sommet de la pile
         """
-        self.valeurs.append(v)
+        self.valeurs.append(c)
 
     def depiler(self):
         """
-        Retire et renvoie l'element place au sommet de la pile,
-        si la pile n'est pas vide.
+        Supprime l'element place au sommet de la pile, a condition qu'elle soit non vide
         """
-        if not self.est_vide():
-            return self.valeurs.pop()
-    
-    def parenthesage(ch):
-        """
-        Renvoie True si la chaine ch est bien parenthesee et False sinon
-        """
-        p = Pile()
-        for c in ch:
-            if c == '(':
-                p.empiler(c)
-            elif c == ')':
-                if p.est_vide():
-                    return False
+        if self.est_vide() == False:
+            self.valeurs.pop()
+
+
+def parenthesage(ch):
+    """
+    Renvoie True si la chaine ch est bien parenthesee et False sinon
+    """
+    p = Pile()
+    for c in ch:
+        if c == "(":
+            p.empiler(c)
+        elif c == ")" :
+            if p.est_vide():
+                return False
+            else:
                 p.depiler()
-        return p.est_vide()
+    return p.est_vide()

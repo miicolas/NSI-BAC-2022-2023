@@ -1,6 +1,6 @@
 def pascal(n):
     triangle= [[1]]
-    for k in range(1,n):
+    for k in range(1,n+1):
         ligne_k = [1]
         for i in range(1,k):
             ligne_k.append(triangle[k-1][i-1]+triangle[k-1][i])

@@ -1,12 +1,11 @@
-
 class Noeud:
     '''
-    classe implÃ©mentant un noeud d'arbre binaire
+    classe implÃƒÂ©mentant un noeud d'arbre binaire
     '''
 
     def __init__(self, g, v, d):
         '''
-        un objet Noeud possÃ¨de 3 attributs :
+        un objet Noeud possÃ©de 3 attributs :
         - gauche : le sous-arbre gauche,
         - valeur : la valeur de l'Ã©tiquette,
         - droit : le sous-arbre droit.
@@ -27,19 +26,16 @@ class Noeud:
         '''
         return self.gauche is None and self.droit is None
 
-
-
-
-
-def expression_infixe(e) : 
-    s = ""
+def expression_infixe(e):
+    s = ''
     if e.gauche is not None:
-        s = "(" + s + expression_infixe(e.gauche) 
-    s = s + str(e.valeur)
-    if e.droit is not None:
-        s = s + expression_infixe(e.droit) + ")"
+        s = '(' + s + expression_infixe(e.gauche)
+    s = s + str(e.valeur) 
+    if e.gauche is not None:
+        s = s + expression_infixe(e.droit) + ')'
     return s
 
-print(expression_infixe(Noeud(Noeud(Noeud(None, 3, None),
+e = Noeud(Noeud(Noeud(None, 3, None),
     '*', Noeud(Noeud(None, 8, None), '+', Noeud(None, 7, None))),
-    '-', Noeud(Noeud(None, 2, None), '+', Noeud(None, 1, None)))))
+    '-', Noeud(Noeud(None, 2, None), '+', Noeud(None, 1, None)))
+

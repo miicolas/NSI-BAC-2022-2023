@@ -1,12 +1,10 @@
-def moyenne (liste_notes) :
-    assert type(liste_notes) == list
-    """Renvoie la moyenne pondérée des notes de la liste liste_notes."""
-    somme = 0
-    coefficients = 0
-    for note,coefficient in liste_notes : # On parcourt la liste
-        somme += note * coefficient # On ajoute le produit de la note et du coefficient à la somme
-        coefficients += coefficient # On ajoute le coefficient à la somme des coefficients
-    return somme / coefficients # On renvoie la moyenne pondérée
+def moyenne(liste_notes) : 
+    s_note = 0
+    s_coeff = 0 
+    for i, j in liste_notes : 
+        s_note += i*j
+        s_coeff += j
 
-assert moyenne([(15, 2), (9, 1), (12, 3)]) == 12.5
+    return s_note/s_coeff
 
+print(moyenne([(15, 2), (9, 1), (12, 3)])) 
