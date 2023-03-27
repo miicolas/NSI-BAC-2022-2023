@@ -1,11 +1,9 @@
-def couples_consecutifs (L):
-    """renvoie la liste des couples consécutifs de L
-    exemple : couples_consecutifs([1,2,3,4,5]) renvoie [(1,2),(2,3),(3,4),(4,5)]"""
+def couples_consecutifs (tab) : 
     r = []
-    for i in range(len(L)-1):
-        if L[i+1] -  L[i] == 1:
-            r.append((L[i],L[i+1]))
-    return r
-            
+    for i in range(len(tab)-1) : 
+        if tab[i+1] - tab[i] == 1 : 
+            r.append((tab[i], tab[i+1]))
+    return r 
 
-print(couples_consecutifs([1,4,3,5]))
+print(couples_consecutifs([1, 4, 5, 3]))
+print(couples_consecutifs([5, 1, 2, 3, 8, -5, -4, 7]))

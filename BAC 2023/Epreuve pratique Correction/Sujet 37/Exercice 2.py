@@ -12,7 +12,6 @@ class AdresseIP:
         """renvoie True si l'adresse IP est une adresse
            reservee, False sinon"""
         return self.adresse == '192.168.0.0' or self.adresse == '192.168.0.255'
-
              
     def adresse_suivante(self):
         """renvoie un objet de AdresseIP avec l'adresse 

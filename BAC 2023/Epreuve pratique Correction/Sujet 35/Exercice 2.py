@@ -32,13 +32,12 @@ class Carre:
 
         #test de la somme de chaque ligne
         for i in range(1, self.ordre):
-            if self.somme_ligne(i)  != s:
+            if self.somme_ligne(i) != s:
                 return False
 
         #test de la somme de chaque colonne
         for j in range(self.ordre):
-            if self.somme_col(j) != s:
+            if self.somme.col(j) != s:
                 return False
 
         return True
-

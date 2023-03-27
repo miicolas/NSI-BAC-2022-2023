@@ -1,0 +1,14 @@
+def rangement_valeurs(notes_eval) : 
+    tab = [0]*11
+    for notes in notes_eval : 
+        tab[notes] = tab[notes] + 1
+    return tab 
+print(rangement_valeurs([2, 0, 5, 9, 6, 9, 10, 5, 7, 9, 9, 5, 0, 9, 6, 5, 4]))
+
+def notes_triees(effectifs_notes) : 
+    tab = []
+    for i in range(len(effectifs_notes)) : 
+        for j in range(effectifs_notes[i]) : 
+            tab.append(i)
+
+    return tab 

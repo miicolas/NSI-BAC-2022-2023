@@ -13,5 +13,5 @@ def dichotomie(tab, x):
         if x > tab[m]:
             debut = m + 1
         else:
-             fin = m - 1
+             fin = m-1
     return False

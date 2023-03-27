@@ -1,10 +1,7 @@
-def fibonacci (n): 
-    if n == 0: 
-        return 0 
-    elif n == 1: 
-        return 1 
-    else: 
-        return fibonacci (n-1) + fibonacci (n-2)
-
-print(fibonacci(2))
-print(fibonacci(25))
+def fibonacci (n) : 
+    tab = [None]*(n+1)
+    tab[1] = 1
+    tab[2] = 1
+    for i in range(3, n+1):
+        tab[i] = tab[i-1] + tab[i-2]
+    return tab[n]

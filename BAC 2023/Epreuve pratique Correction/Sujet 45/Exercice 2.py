@@ -15,7 +15,4 @@ def bin_to_dec(nb_bin):
             bit_droit = 0
         else:
             bit_droit = 1
-        return 2* bin_to_dec(nb_bin[:-1]) + bit_droit
-
-print(dec_to_bin(25))
-print(bin_to_dec('101010'))
+        return 2 * bin_to_dec(nb_bin[:-1]) + bit_droit

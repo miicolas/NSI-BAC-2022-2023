@@ -1,7 +1,7 @@
 def ajoute(indice, element, liste):
     nbre_elts = len(liste)
     L = [0 for i in range(nbre_elts + 1)]
-    if indice < nbre_elts:
+    if indice < nbre_elts :
         for i in range(indice):
             L[i] = liste[i]
         L[indice] = element

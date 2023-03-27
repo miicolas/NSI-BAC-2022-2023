@@ -10,7 +10,7 @@ def liste_puissances_borne (a, borne):
     L=[]
     b= 1
     while b < borne  : 
-        b = a* b
+        b = a*b
         L.append(b)
     L.pop()
     return L

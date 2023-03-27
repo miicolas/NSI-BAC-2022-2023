@@ -5,15 +5,16 @@ class Arbre:
         self.fd = None
 
 
-def taille(a):
-    if a == None:
+def taille (a): 
+    if a == None : 
         return 0
-    return 1+taille(a.fg)+taille(a.fd)
+    return 1 + taille(a.fg) + taille (a.fd)
 
-def hauteur(a):
-    if a == None:
+def hauteur (a) : 
+    if a == None : 
         return 0
-    return 1+max(hauteur(a.fg), hauteur(a.fd))
+    return 1+ max(hauteur(a.fg), hauteur(a.fd))
+
 
 abr = Arbre(0)
 a1 = Arbre(1)
